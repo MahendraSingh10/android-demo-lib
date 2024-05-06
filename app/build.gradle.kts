@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -42,8 +45,18 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation("androidx.compose.ui:ui:1.0.3")
+    implementation("androidx.compose.material:material:1.0.3")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.0.3")
     implementation(project(":mylibrary-demo-lib"))
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.foundation.layout.android)
+    implementation(libs.androidx.material3.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation ("androidx.activity:activity-compose:1.3.1")
+    implementation("com.github.MahendraSingh10:AndroidLibrary1:1.0")
+
 }
